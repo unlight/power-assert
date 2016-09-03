@@ -1,7 +1,7 @@
 {
   "name": "power-assert",
   "description": "Power Assert in JavaScript",
-  "version": "1.4.1",
+  "version": "1.4.1-a",
   "author": {
     "name": "Takuto Wada",
     "email": "takuto.wada@gmail.com",
@@ -98,8 +98,8 @@
     "url": "https://github.com/power-assert-js/power-assert.git"
   },
   "scripts": {
-    "build": "mkdir -p ./build && npm prune && npm dedupe && browserify -p licensify --standalone assert ./index.js | dereserve | derequire > build/power-assert.js",
-    "clean": "rm -rf ./espowered_tests && rm -rf ./build",
+    "build": "mkdir build && npm prune && npm dedupe && browserify -p licensify --standalone assert ./index.js | dereserve | derequire > build/power-assert.js",
+    "clean": "rm -rf espowered_tests && rm -rf build",
     "setup-dir": "mkdir -p ./build && mkdir -p ./espowered_tests/tobe_instrumented && cp -r test/not_tobe_instrumented/ ./espowered_tests/not_tobe_instrumented/",
     "setup-espower": "for i in $(find ./test/tobe_instrumented -name '*.js'); do babel $i > ./espowered_tests/tobe_instrumented/$(basename $i); done",
     "setup": "npm run clean && npm run setup-dir && npm run setup-espower && npm run build",

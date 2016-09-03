@@ -47,6 +47,7 @@ function customize (customOptions) {
 }
 
 var defaultAssert = customize();
-define(defaultAssert, { '__esModule': true });
-defaultAssert['default'] = defaultAssert;
+// define(defaultAssert, { '__esModule': true });
+// defaultAssert['default'] = defaultAssert;
 module.exports = defaultAssert;
+module.exports['default'] = defaultAssert;
